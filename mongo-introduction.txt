@@ -1,0 +1,134 @@
+---
+> show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
+> use assignment
+switched to db assignment
+> show collections
+users
+> db.users.find()
+> db.users.insert({"first_name":"roushan","last_name":"kumar"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insertMany([{"first_name":"indra","last_name":"kumar"},{"first_name":"pratap","last_name":"kumar"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619ca9cd15128c72f2c343b3"),
+                ObjectId("619ca9cd15128c72f2c343b4")
+        ]
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("619ca95f15128c72f2c343b2"),
+        "first_name" : "roushan",
+        "last_name" : "kumar"
+}
+{
+        "_id" : ObjectId("619ca9cd15128c72f2c343b3"),
+        "first_name" : "indra",
+        "last_name" : "kumar"
+}
+{
+        "_id" : ObjectId("619ca9cd15128c72f2c343b4"),
+        "first_name" : "pratap",
+        "last_name" : "kumar"
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("619ca95f15128c72f2c343b2"),
+        "first_name" : "roushan",
+        "last_name" : "kumar"
+}
+{
+        "_id" : ObjectId("619ca9cd15128c72f2c343b3"),
+        "first_name" : "indra",
+        "last_name" : "kumar"
+}
+{
+        "_id" : ObjectId("619ca9cd15128c72f2c343b4"),
+        "first_name" : "pratap",
+        "last_name" : "kumar"
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9f5"),
+        "first_name" : "Sibylla",
+        "last_name" : "Gotcliff",
+        "email" : "sgotcliff0@businessweek.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "156.221.214.185",
+        "age" : 46
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9f6"),
+        "first_name" : "Tamma",
+        "last_name" : "Gallear",
+        "email" : "tgallear1@lycos.com",
+        "gender" : "Polygender",
+        "ip_address" : "185.69.215.153",
+        "age" : 34
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9f7"),
+        "first_name" : "Cheri",
+        "last_name" : "Gibbe",
+        "email" : "cgibbe2@smugmug.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "42.163.166.148",
+        "age" : 38
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9f8"),
+        "first_name" : "Althea",
+        "last_name" : "Oswell",
+        "email" : "aoswell3@freewebs.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "1.57.201.4",
+        "age" : 68
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9f9"),
+        "first_name" : "Edik",
+        "last_name" : "Carney",
+        "email" : "ecarney4@taobao.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "245.247.210.26",
+        "age" : 70
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9fa"),
+        "first_name" : "Danie",
+        "last_name" : "Shakelady",
+        "email" : "dshakelady5@kickstarter.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "98.51.40.100",
+        "age" : 63
+}
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9fb"),
+        "first_name" : "Karim",
+        "last_name" : "Tann",
+        "email" : "ktann6@homestead.com",
+        "gender" : "Agender",
+        "ip_address" : "159.80.32.182",
+        "age" : 82
+}
+> db.users.find({"last_name":"kumar"})
+{ "_id" : ObjectId("619ca95f15128c72f2c343b2"), "first_name" : "roushan", "last_name" : "kumar" }
+{ "_id" : ObjectId("619ca9cd15128c72f2c343b3"), "first_name" : "indra", "last_name" : "kumar" }
+{ "_id" : ObjectId("619ca9cd15128c72f2c343b4"), "first_name" : "pratap", "last_name" : "kumar" }
+> db.users.findOne({  "_id" : ObjectId("619caaa251cbcb8424a9b9fb")})
+{
+        "_id" : ObjectId("619caaa251cbcb8424a9b9fb"),
+        "first_name" : "Karim",
+        "last_name" : "Tann",
+        "email" : "ktann6@homestead.com",
+        "gender" : "Agender",
+        "ip_address" : "159.80.32.182",
+        "age" : 82
+}
+>
+
+
+
