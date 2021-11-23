@@ -1,0 +1,15 @@
+show dbs
+use assignment
+show collections// users are collection
+db.users.find().pretty()
+db.users.update({"_id" : ObjectId("619ca95f15128c72f2c343b2")},{$set{"gender":"male"}})
+db.users.updateMany({ "_id" : ObjectId("619ca95f15128c72f2c343b2")},{"age":24},{"email":"rk@gmail.com}})
+
+ db.users.remove({  "_id" : ObjectId("619caaa251cbcb8424a9b9fb")})  
+
+db.users.deleteOne({ db.users.remove({  "_id" : ObjectId("619caaa251cbcb8424a9b9fb")})  
+ db.users.deleteMany({"gender":"male"})
+{ "acknowledged" : true, "deletedCount" : 2 }   
+db.users.drop()
+ db.dropDatabase() 
+ 
